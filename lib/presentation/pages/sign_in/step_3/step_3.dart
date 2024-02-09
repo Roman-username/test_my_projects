@@ -31,6 +31,7 @@ class _Step3State extends ConsumerState<Step3> {
     return Form(
       key: _formKey,
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           const StepHeader(title: 'Регистрация'),
           LabeledTextField(

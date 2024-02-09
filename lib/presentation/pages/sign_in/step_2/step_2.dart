@@ -21,6 +21,7 @@ class Step2 extends ConsumerWidget {
           (d) => ref.read(signInStepIdxNotifierProvider.notifier).increment());
     }
     return Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
         StepHeader(
           title: 'Подтверждение',

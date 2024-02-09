@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'firebase_options.dart';
 import 'presentation/pages/home.dart';
-import 'presentation/pages/sign_in/sign_in.dart';
+import 'presentation/pages/sign_in/sign_in_page.dart';
 import 'presentation/pages/splash_screen.dart';
 import 'styles.dart';
 

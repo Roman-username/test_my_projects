@@ -82,6 +82,7 @@ class _PinCodeFieldState extends ConsumerState<PinCodeField> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 35),
       child: PinCodeTextField(
+        keyboardType: TextInputType.number,
         appContext: context,
         length: 6,
         focusNode: _focusNode,
@@ -112,5 +113,11 @@ class _PinCodeFieldState extends ConsumerState<PinCodeField> {
         },
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _focusNode.dispose();
   }
 }
