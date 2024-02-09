@@ -49,22 +49,20 @@ class SignInPage extends ConsumerWidget {
         backgroundColor: Colors.white,
       ),
       body: SafeArea(
-        child: Column(
+        child: ListView(
           children: [
             Stepper(index),
             const SizedBox(height: 24),
-            Flexible(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: IndexedStack(
-                  alignment: AlignmentDirectional.topCenter,
-                  index: index,
-                  children: const [
-                    Step1(),
-                    Step2(),
-                    Step3(),
-                  ],
-                ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: IndexedStack(
+                alignment: AlignmentDirectional.topCenter,
+                index: index,
+                children: const [
+                  Step1(),
+                  Step2(),
+                  Step3(),
+                ],
               ),
             )
           ],

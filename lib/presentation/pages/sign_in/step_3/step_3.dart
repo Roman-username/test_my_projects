@@ -26,11 +26,14 @@ class _Step3State extends ConsumerState<Step3> {
         name.isNotEmpty &&
         lastName != null &&
         lastName.isNotEmpty) {
-      Navigator.pushReplacementNamed(context, 'home');
+      WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+        Navigator.pushReplacementNamed(context, 'home');
+      });
     }
     return Form(
       key: _formKey,
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           const StepHeader(title: 'Регистрация'),
           LabeledTextField(
