@@ -22,10 +22,8 @@ class _Step3State extends ConsumerState<Step3> {
     final user = ref.watch(userNotifierProvider).value;
     final name = user?.name;
     final lastName = user?.lastName;
-    if (name != null &&
-        name.isNotEmpty &&
-        lastName != null &&
-        lastName.isNotEmpty) {
+    if ((name != null && name.isNotEmpty) &&
+        (lastName != null && lastName.isNotEmpty)) {
       WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
         Navigator.pushReplacementNamed(context, 'home');
       });
